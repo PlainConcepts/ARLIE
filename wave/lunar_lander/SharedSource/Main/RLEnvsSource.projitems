@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>846d34c8-e537-4dc7-b646-cff649ce42e4</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>RLEnvs</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Helpers\LunarConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Services\KeyboardActionsSceneBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Components\EnginesComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Components\EngineParticlesEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Components\RandomTerrainComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Components\TerrainComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Components\TerrainPointInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\CameraRoulette.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\ColorButtonComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\DualTargetCamera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\DustBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\ShipComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\DualTargetCameraSceneBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\EntityFollowerSceneBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\EntityFollower.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\EpisodeUpdater.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\KeyboardActionsBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\BaseImpulseActivator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\LightParticleActivator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\ObstacleAvoider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\ParticleImpulseActivator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\PuspinComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\ScenarioManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\SimpleButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Components\TerrainMeshComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Helper\EngineActionsExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Helper\Perlin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Helper\BoundingBoxExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Materials\PointSpriteMaterial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Materials\PointSpriteVertexFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Model\EngineActions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\CurveApplierComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\AEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\BoxEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\CircleEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\ConeEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\EdgeEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\ModelEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\PointEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\ShapeFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\ShapeType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Emitters\SphereEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Forces\AForce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Forces\AGravityForce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Forces\DirectionalForce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Forces\ForcesManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Forces\PointGravity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Forces\SphereGravityForce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Forces\VortexForce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\NewParticleRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\NewParticleSystem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Particles\Particle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Services\KeyboardActionsService3D.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D3\Services\Lunar3DNetworkService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Helpers\EngineActionsExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Model\EngineActions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Model\LunarObservations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyScene3D.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Renderers\TerrainRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)D2\Services\LunarNetworkService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WaitingScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WaveContent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)D2\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Shaders\HLSL\Helpers.fxh" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\HLSL\PointSpriteMaterial\CompileShaders.cmd" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\HLSL\PointSpriteMaterial\PointSpriteMaterial.fx" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\HLSL\TerrainMaterial\CompileShaders.cmd" />
+    <None Include="$(MSBuildThisFileDirectory)Shaders\HLSL\TerrainMaterial\Terrain.fx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\HLSL\TerrainMaterial\TerrainpsTerrain.fxo">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\HLSL\TerrainMaterial\TerrainvsTerrain.fxo">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\GLSL\PointSpriteMaterial\psPointSpriteMaterial.frag" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\GLSL\PointSpriteMaterial\vsPointSpriteMaterial.vert" />
+  </ItemGroup>
+</Project>

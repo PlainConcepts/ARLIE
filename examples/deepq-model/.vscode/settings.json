@@ -1,0 +1,3 @@
+{
+  "python.pythonPath": "${env:LOCALAPPDATA}\\Continuum\\miniconda3\\envs\\arlie\\python.exe",
+}

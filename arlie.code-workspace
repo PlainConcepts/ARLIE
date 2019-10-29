@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "arlie",
+			"path": "arlie"
+		},
+		{
+			"name": "human-model",
+			"path": "examples/human-model"
+		},
+		{
+			"name": "random-model",
+			"path": "examples/random-model"
+		},
+		{
+			"name": "deepq-model",
+			"path": "examples/deepq-model"
+		},
+		{
+			"name": "stable-baselines",
+			"path": "examples/stable-baselines"
+		},
+		{
+			"path": "wave/lunar_lander"
+		}
+	],
+	"settings": {}
+}

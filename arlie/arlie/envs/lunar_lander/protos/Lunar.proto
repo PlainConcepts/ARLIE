@@ -1,0 +1,45 @@
+syntax = "proto3";
+option csharp_namespace = "RLEnvs.Lunar2D";
+
+message Observation {
+    float posX = 1;
+    float posY = 2;
+    float velX = 3;
+    float velY = 4;
+    float angle = 5;
+    float angVel = 6;
+    float leftContact = 7;
+    float rightContact = 8;
+}
+
+message Action {
+    enum Engine {
+        NONE = 0;
+        LEFT = 1;
+        MAIN = 2;
+        RIGHT = 3;
+    }
+    Engine EngineAction = 1;
+}
+
+message ActionResult {
+    Observation observation = 1;
+    float reward = 2;
+    bool done = 3;
+}
+
+message DimResult {
+    int32 value = 1;
+}
+
+message ServiceMessage {
+
+}
+
+service LunarService {
+    rpc GetActionDim (ServiceMessage) returns (DimResult);
+    rpc GetObservationDim (ServiceMessage) returns (DimResult);
+    rpc PerformAction (Action) returns (ActionResult);
+    rpc Render (ServiceMessage) returns (ServiceMessage);
+    rpc Reset (ServiceMessage) returns (Observation);
+}

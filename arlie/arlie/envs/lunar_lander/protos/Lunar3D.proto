@@ -1,0 +1,57 @@
+syntax = "proto3";
+option csharp_namespace = "RLEnvs.Lunar3D";
+
+message Observation {
+    float posX= 1;
+	float posY= 2;
+	float posZ= 3;
+	float velX= 4;
+	float velY= 5;
+	float velZ= 6;
+	float angleX= 7;
+	float angleY= 8;
+	float angleZ= 9;
+	float angVelX= 10;
+	float angVelY= 11;
+	float angVelZ= 12;
+	float footContactF= 13;
+	float footContactB= 14;
+	float footContactL= 15;
+	float footContactR= 16; 
+}
+
+message Action {
+    enum Engine {
+		NONE = 0;
+        YAWPOSITIVE = 1;
+        YAWNEGATIVE= 2;
+        PITCHPOSITIVE = 3;
+        PITCHNEGATIVE =4;
+        ROLLNEGATIVE = 5;
+        ROLLPOSITIVE =6 ;
+        MAIN =7;
+    }
+    Engine EngineAction = 1;
+}
+
+message ActionResult {
+    Observation observation = 1;
+    float reward = 2;
+    bool done = 3;
+}
+
+message DimResult {
+    int32 value = 1;
+}
+
+message ServiceMessage {
+
+}
+
+service Lunar3DService {
+    rpc GetActionDim (ServiceMessage) returns (DimResult);
+    rpc GetObservationDim (ServiceMessage) returns (DimResult);
+    rpc PerformAction (Action) returns (ActionResult);
+    rpc Render (ServiceMessage) returns (ServiceMessage);
+    rpc Reset (ServiceMessage) returns (Observation);
+}

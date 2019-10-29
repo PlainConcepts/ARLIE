@@ -1,0 +1,170 @@
+﻿<Prefab xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="WaveEngine.Framework.Models.Assets">
+  <Id xmlns="WaveEngine.Framework.Models">a9faf101-5d6a-4cf8-8753-bb820be07b21</Id>
+  <EntityModel xmlns:d2p1="WaveEngine.Framework.Models.Entities">
+    <d2p1:SerializeChildrens>
+      <d2p1:BaseEntityModel i:type="d2p1:EntityModel">
+        <d2p1:SerializeChildrens />
+        <d2p1:isDisabled>false</d2p1:isDisabled>
+        <d2p1:isStatic>false</d2p1:isStatic>
+        <d2p1:isVisible>true</d2p1:isVisible>
+        <d2p1:name>spotLight</d2p1:name>
+        <d2p1:tag i:nil="true" />
+        <d2p1:SerializeComponents xmlns:d5p1="WaveEngine.Framework">
+          <d5p1:Component xmlns:d6p1="WaveEngine.Framework.Graphics" i:type="d6p1:Transform3D">
+            <d6p1:LocalOrientation xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:W>0.380743623</d7p1:W>
+              <d7p1:X>0.03847947</d7p1:X>
+              <d7p1:Y>0.0928985253</d7p1:Y>
+              <d7p1:Z>0.9191972</d7p1:Z>
+            </d6p1:LocalOrientation>
+            <d6p1:LocalPosition xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:X>0.0409980044</d7p1:X>
+              <d7p1:Y>0.0231712889</d7p1:Y>
+              <d7p1:Z>-0.854975939</d7p1:Z>
+            </d6p1:LocalPosition>
+            <d6p1:LocalScale xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:X>0.00222222623</d7p1:X>
+              <d7p1:Y>0.0022222267</d7p1:Y>
+              <d7p1:Z>0.00222222228</d7p1:Z>
+            </d6p1:LocalScale>
+          </d5p1:Component>
+          <d5p1:Component xmlns:d6p1="WaveEngine.Framework.Graphics" i:type="d6p1:SpotLightProperties">
+            <d6p1:Color xmlns:d7p1="WaveEngine.Common.Graphics">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>53</d7p1:B>
+              <d7p1:G>114</d7p1:G>
+              <d7p1:R>255</d7p1:R>
+            </d6p1:Color>
+            <d6p1:Intensity>7.15</d6p1:Intensity>
+            <d6p1:isLightDisabled>false</d6p1:isLightDisabled>
+            <d6p1:lightConeAngle>1.543</d6p1:lightConeAngle>
+            <d6p1:lightRange>10</d6p1:lightRange>
+          </d5p1:Component>
+          <d5p1:Component xmlns:d6p1="WaveEngine.Framework.Graphics" i:type="d6p1:SpotLightRenderer">
+            <d5p1:FrustumCullingEnabled>true</d5p1:FrustumCullingEnabled>
+            <d5p1:IsVisible>true</d5p1:IsVisible>
+          </d5p1:Component>
+        </d2p1:SerializeComponents>
+      </d2p1:BaseEntityModel>
+      <d2p1:BaseEntityModel i:type="d2p1:EntityModel">
+        <d2p1:SerializeChildrens />
+        <d2p1:isDisabled>false</d2p1:isDisabled>
+        <d2p1:isStatic>false</d2p1:isStatic>
+        <d2p1:isVisible>true</d2p1:isVisible>
+        <d2p1:name>light</d2p1:name>
+        <d2p1:tag i:nil="true" />
+        <d2p1:SerializeComponents xmlns:d5p1="WaveEngine.Framework">
+          <d5p1:Component xmlns:d6p1="WaveEngine.Framework.Graphics" i:type="d6p1:Transform3D">
+            <d6p1:LocalOrientation xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:W>1</d7p1:W>
+              <d7p1:X>0</d7p1:X>
+              <d7p1:Y>0</d7p1:Y>
+              <d7p1:Z>0</d7p1:Z>
+            </d6p1:LocalOrientation>
+            <d6p1:LocalPosition xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:X>0</d7p1:X>
+              <d7p1:Y>0</d7p1:Y>
+              <d7p1:Z>0</d7p1:Z>
+            </d6p1:LocalPosition>
+            <d6p1:LocalScale xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:X>1</d7p1:X>
+              <d7p1:Y>1</d7p1:Y>
+              <d7p1:Z>1</d7p1:Z>
+            </d6p1:LocalScale>
+          </d5p1:Component>
+          <d5p1:Component xmlns:d6p1="WaveEngine.Framework.Graphics" i:type="d6p1:PointLightProperties">
+            <d6p1:Color xmlns:d7p1="WaveEngine.Common.Graphics">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>0</d7p1:B>
+              <d7p1:G>73</d7p1:G>
+              <d7p1:R>255</d7p1:R>
+            </d6p1:Color>
+            <d6p1:Intensity>1.21</d6p1:Intensity>
+            <d6p1:isLightDisabled>false</d6p1:isLightDisabled>
+            <d6p1:LightRange>10</d6p1:LightRange>
+          </d5p1:Component>
+          <d5p1:Component xmlns:d6p1="WaveEngine.Framework.Graphics" i:type="d6p1:PointLightRenderer">
+            <d5p1:FrustumCullingEnabled>true</d5p1:FrustumCullingEnabled>
+            <d5p1:IsVisible>true</d5p1:IsVisible>
+          </d5p1:Component>
+        </d2p1:SerializeComponents>
+      </d2p1:BaseEntityModel>
+      <d2p1:BaseEntityModel i:type="d2p1:EntityModel">
+        <d2p1:SerializeChildrens />
+        <d2p1:isDisabled>false</d2p1:isDisabled>
+        <d2p1:isStatic>false</d2p1:isStatic>
+        <d2p1:isVisible>true</d2p1:isVisible>
+        <d2p1:name>lightBillboard</d2p1:name>
+        <d2p1:tag i:nil="true" />
+        <d2p1:SerializeComponents xmlns:d5p1="WaveEngine.Framework">
+          <d5p1:Component xmlns:d6p1="WaveEngine.Framework.Graphics" i:type="d6p1:Transform3D">
+            <d6p1:LocalOrientation xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:W>0.99999994</d7p1:W>
+              <d7p1:X>0</d7p1:X>
+              <d7p1:Y>0</d7p1:Y>
+              <d7p1:Z>0</d7p1:Z>
+            </d6p1:LocalOrientation>
+            <d6p1:LocalPosition xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:X>-4.40085023E-05</d7p1:X>
+              <d7p1:Y>-5.48559146E-05</d7p1:Y>
+              <d7p1:Z>-1.479754E-05</d7p1:Z>
+            </d6p1:LocalPosition>
+            <d6p1:LocalScale xmlns:d7p1="WaveEngine.Common.Math">
+              <d7p1:X>1</d7p1:X>
+              <d7p1:Y>1</d7p1:Y>
+              <d7p1:Z>1</d7p1:Z>
+            </d6p1:LocalScale>
+          </d5p1:Component>
+          <d5p1:Component xmlns:d6p1="WaveEngine.Components.Graphics2D" i:type="d6p1:Billboard">
+            <d6p1:BillboardType>PointOrientation</d6p1:BillboardType>
+            <d6p1:Origin xmlns:d7p1="http://schemas.datacontract.org/2004/07/WaveEngine.Common.Math">
+              <d7p1:X>0.5</d7p1:X>
+              <d7p1:Y>0.5</d7p1:Y>
+            </d6p1:Origin>
+            <d6p1:Rotation>0</d6p1:Rotation>
+            <d6p1:TexturePath>Content/Assets/Textures/redLight.png.wpk</d6p1:TexturePath>
+            <d6p1:TintColor xmlns:d7p1="WaveEngine.Common.Graphics">
+              <d7p1:A>255</d7p1:A>
+              <d7p1:B>255</d7p1:B>
+              <d7p1:G>255</d7p1:G>
+              <d7p1:R>255</d7p1:R>
+            </d6p1:TintColor>
+            <d6p1:isGlobalAsset>false</d6p1:isGlobalAsset>
+            <d6p1:texturePath>Content/Assets/Textures/redLight.png.wpk</d6p1:texturePath>
+          </d5p1:Component>
+          <d5p1:Component xmlns:d6p1="WaveEngine.Components.Shared.Graphic3D" i:type="d6p1:BillboardRenderer">
+            <d5p1:FrustumCullingEnabled>true</d5p1:FrustumCullingEnabled>
+            <d5p1:IsVisible>true</d5p1:IsVisible>
+            <d6p1:layerId>3</d6p1:layerId>
+          </d5p1:Component>
+        </d2p1:SerializeComponents>
+      </d2p1:BaseEntityModel>
+    </d2p1:SerializeChildrens>
+    <d2p1:isDisabled>false</d2p1:isDisabled>
+    <d2p1:isStatic>false</d2p1:isStatic>
+    <d2p1:isVisible>true</d2p1:isVisible>
+    <d2p1:name>antena</d2p1:name>
+    <d2p1:tag i:nil="true" />
+    <d2p1:SerializeComponents xmlns:d3p1="WaveEngine.Framework">
+      <d3p1:Component xmlns:d4p1="WaveEngine.Framework.Graphics" i:type="d4p1:Transform3D">
+        <d4p1:LocalOrientation xmlns:d5p1="WaveEngine.Common.Math">
+          <d5p1:W>0.99999994</d5p1:W>
+          <d5p1:X>0</d5p1:X>
+          <d5p1:Y>0</d5p1:Y>
+          <d5p1:Z>0</d5p1:Z>
+        </d4p1:LocalOrientation>
+        <d4p1:LocalPosition xmlns:d5p1="WaveEngine.Common.Math">
+          <d5p1:X>0</d5p1:X>
+          <d5p1:Y>0</d5p1:Y>
+          <d5p1:Z>0</d5p1:Z>
+        </d4p1:LocalPosition>
+        <d4p1:LocalScale xmlns:d5p1="WaveEngine.Common.Math">
+          <d5p1:X>450</d5p1:X>
+          <d5p1:Y>450</d5p1:Y>
+          <d5p1:Z>450</d5p1:Z>
+        </d4p1:LocalScale>
+      </d3p1:Component>
+    </d2p1:SerializeComponents>
+  </EntityModel>
+  <EntityPointers xmlns:d2p1="http://schemas.datacontract.org/2004/07/WaveEngine.Framework.Models.Entities" />
+</Prefab>

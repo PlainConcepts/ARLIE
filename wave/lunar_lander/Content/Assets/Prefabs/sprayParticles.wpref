@@ -1,0 +1,198 @@
+﻿<Prefab xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="WaveEngine.Framework.Models.Assets">
+  <Id xmlns="WaveEngine.Framework.Models">a846b5e7-5945-4930-b7da-5b7f59839b67</Id>
+  <EntityModel xmlns:d2p1="WaveEngine.Framework.Models.Entities">
+    <d2p1:SerializeChildrens />
+    <d2p1:isDisabled>false</d2p1:isDisabled>
+    <d2p1:isStatic>false</d2p1:isStatic>
+    <d2p1:isVisible>true</d2p1:isVisible>
+    <d2p1:name>sprayParticles</d2p1:name>
+    <d2p1:tag i:nil="true" />
+    <d2p1:SerializeComponents xmlns:d3p1="WaveEngine.Framework">
+      <d3p1:Component xmlns:d4p1="WaveEngine.Framework.Graphics" i:type="d4p1:Transform3D">
+        <d4p1:LocalOrientation xmlns:d5p1="WaveEngine.Common.Math">
+          <d5p1:W>1</d5p1:W>
+          <d5p1:X>0</d5p1:X>
+          <d5p1:Y>0</d5p1:Y>
+          <d5p1:Z>0</d5p1:Z>
+        </d4p1:LocalOrientation>
+        <d4p1:LocalPosition xmlns:d5p1="WaveEngine.Common.Math">
+          <d5p1:X>0</d5p1:X>
+          <d5p1:Y>0</d5p1:Y>
+          <d5p1:Z>0</d5p1:Z>
+        </d4p1:LocalPosition>
+        <d4p1:LocalScale xmlns:d5p1="WaveEngine.Common.Math">
+          <d5p1:X>1</d5p1:X>
+          <d5p1:Y>1</d5p1:Y>
+          <d5p1:Z>1</d5p1:Z>
+        </d4p1:LocalScale>
+      </d3p1:Component>
+      <d3p1:Component xmlns:d4p1="http://schemas.datacontract.org/2004/07/RLEnvs.D3.Particles" i:type="d4p1:NewParticleSystem">
+        <d4p1:AngularVelocity>0</d4p1:AngularVelocity>
+        <d4p1:AngularVelocityType>Random</d4p1:AngularVelocityType>
+        <d4p1:ApplyForces>false</d4p1:ApplyForces>
+        <d4p1:ColorAnimated>true</d4p1:ColorAnimated>
+        <d4p1:ColorOverLife xmlns:d5p1="http://schemas.datacontract.org/2004/07/WaveEngine.Common.Curves">
+          <d5p1:cacheSize>256</d5p1:cacheSize>
+          <d5p1:isCached>true</d5p1:isCached>
+          <d5p1:keyframes>
+            <d5p1:ColorKeyframe>
+              <d5p1:Lerp>0</d5p1:Lerp>
+              <d5p1:Value xmlns:d8p1="WaveEngine.Common.Graphics">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>255</d8p1:B>
+                <d8p1:G>255</d8p1:G>
+                <d8p1:R>255</d8p1:R>
+              </d5p1:Value>
+            </d5p1:ColorKeyframe>
+            <d5p1:ColorKeyframe>
+              <d5p1:Lerp>1</d5p1:Lerp>
+              <d5p1:Value xmlns:d8p1="WaveEngine.Common.Graphics">
+                <d8p1:A>0</d8p1:A>
+                <d8p1:B>255</d8p1:B>
+                <d8p1:G>255</d8p1:G>
+                <d8p1:R>255</d8p1:R>
+              </d5p1:Value>
+            </d5p1:ColorKeyframe>
+          </d5p1:keyframes>
+        </d4p1:ColorOverLife>
+        <d4p1:ForcesCategory>Cat1</d4p1:ForcesCategory>
+        <d4p1:GravityVector xmlns:d5p1="WaveEngine.Common.Math">
+          <d5p1:X>0</d5p1:X>
+          <d5p1:Y>0</d5p1:Y>
+          <d5p1:Z>0</d5p1:Z>
+        </d4p1:GravityVector>
+        <d4p1:InitColor xmlns:d5p1="WaveEngine.Common.Graphics">
+          <d5p1:A>255</d5p1:A>
+          <d5p1:B>185</d5p1:B>
+          <d5p1:G>185</d5p1:G>
+          <d5p1:R>185</d5p1:R>
+        </d4p1:InitColor>
+        <d4p1:InitColorType>Random</d4p1:InitColorType>
+        <d4p1:InitLife>0.1</d4p1:InitLife>
+        <d4p1:InitLifeType>Constant</d4p1:InitLifeType>
+        <d4p1:InitRotation>0</d4p1:InitRotation>
+        <d4p1:InitRotationType>Random</d4p1:InitRotationType>
+        <d4p1:InitSize>0.1</d4p1:InitSize>
+        <d4p1:InitSizeType>Random</d4p1:InitSizeType>
+        <d4p1:InitSpeed>10</d4p1:InitSpeed>
+        <d4p1:InitSpeedType>Random</d4p1:InitSpeedType>
+        <d4p1:LifeFactor>1</d4p1:LifeFactor>
+        <d4p1:MaxAngularVelocity>1.745329</d4p1:MaxAngularVelocity>
+        <d4p1:MaxColor xmlns:d5p1="WaveEngine.Common.Graphics">
+          <d5p1:A>135</d5p1:A>
+          <d5p1:B>160</d5p1:B>
+          <d5p1:G>160</d5p1:G>
+          <d5p1:R>160</d5p1:R>
+        </d4p1:MaxColor>
+        <d4p1:MaxLife>0</d4p1:MaxLife>
+        <d4p1:MaxParticles>1000</d4p1:MaxParticles>
+        <d4p1:MaxRotation>6.28318453</d4p1:MaxRotation>
+        <d4p1:MaxSize>0.12</d4p1:MaxSize>
+        <d4p1:MaxSpeed>40</d4p1:MaxSpeed>
+        <d4p1:MinAngularVelocity>-1.745329</d4p1:MinAngularVelocity>
+        <d4p1:MinColor xmlns:d5p1="WaveEngine.Common.Graphics">
+          <d5p1:A>155</d5p1:A>
+          <d5p1:B>255</d5p1:B>
+          <d5p1:G>255</d5p1:G>
+          <d5p1:R>255</d5p1:R>
+        </d4p1:MinColor>
+        <d4p1:MinLife>0</d4p1:MinLife>
+        <d4p1:MinRotation>0</d4p1:MinRotation>
+        <d4p1:MinSize>0.1</d4p1:MinSize>
+        <d4p1:MinSpeed>30</d4p1:MinSpeed>
+        <d4p1:PremultiplyAlpha>true</d4p1:PremultiplyAlpha>
+        <d4p1:RotationAnimated>true</d4p1:RotationAnimated>
+        <d4p1:ScreenAlign>Sprite</d4p1:ScreenAlign>
+        <d4p1:SizeAnimated>true</d4p1:SizeAnimated>
+        <d4p1:SizeOverLife xmlns:d5p1="http://schemas.datacontract.org/2004/07/WaveEngine.Common.Curves">
+          <d5p1:cacheSize>256</d5p1:cacheSize>
+          <d5p1:isCached>true</d5p1:isCached>
+          <d5p1:keyframes>
+            <d5p1:FloatKeyframe>
+              <d5p1:Lerp>0</d5p1:Lerp>
+              <d5p1:Value>1</d5p1:Value>
+            </d5p1:FloatKeyframe>
+            <d5p1:FloatKeyframe>
+              <d5p1:Lerp>0.603015065</d5p1:Lerp>
+              <d5p1:Value>9.117647</d5p1:Value>
+            </d5p1:FloatKeyframe>
+            <d5p1:FloatKeyframe>
+              <d5p1:Lerp>1</d5p1:Lerp>
+              <d5p1:Value>10</d5p1:Value>
+            </d5p1:FloatKeyframe>
+          </d5p1:keyframes>
+        </d4p1:SizeOverLife>
+        <d4p1:Space>Local</d4p1:Space>
+        <d4p1:TimeFactor>1</d4p1:TimeFactor>
+        <d4p1:VelocityAnimated>false</d4p1:VelocityAnimated>
+        <d4p1:VelocityOverLifeX xmlns:d5p1="http://schemas.datacontract.org/2004/07/WaveEngine.Common.Curves" i:nil="true" />
+        <d4p1:VelocityOverLifeY xmlns:d5p1="http://schemas.datacontract.org/2004/07/WaveEngine.Common.Curves" i:nil="true" />
+        <d4p1:VelocityOverLifeZ xmlns:d5p1="http://schemas.datacontract.org/2004/07/WaveEngine.Common.Curves" i:nil="true" />
+        <d4p1:VelocityTrailFactor>0</d4p1:VelocityTrailFactor>
+        <d4p1:ZOrdering>true</d4p1:ZOrdering>
+        <d4p1:emitAutomatically>true</d4p1:emitAutomatically>
+        <d4p1:emitDuration>0</d4p1:emitDuration>
+        <d4p1:emitRate>400</d4p1:emitRate>
+        <d4p1:emitType>Rate</d4p1:emitType>
+        <d4p1:layerId>2</d4p1:layerId>
+        <d4p1:shape xmlns:d5p1="http://schemas.datacontract.org/2004/07/RLEnvs.D3.Particles.Emitters" i:type="d5p1:PointEmitter">
+          <d5p1:Randomize>0</d5p1:Randomize>
+          <d5p1:VelocityOffset xmlns:d6p1="WaveEngine.Common.Math">
+            <d6p1:X>0</d6p1:X>
+            <d6p1:Y>0</d6p1:Y>
+            <d6p1:Z>0</d6p1:Z>
+          </d5p1:VelocityOffset>
+        </d4p1:shape>
+        <d4p1:sizeAnimated>true</d4p1:sizeAnimated>
+        <d4p1:texturePath>Content/Assets/Textures/smoke2.png.wpk</d4p1:texturePath>
+        <d4p1:velocityAnimated>false</d4p1:velocityAnimated>
+      </d3p1:Component>
+      <d3p1:Component xmlns:d4p1="http://schemas.datacontract.org/2004/07/RLEnvs.D3.Particles" i:type="d4p1:NewParticleRenderer">
+        <d3p1:FrustumCullingEnabled>true</d3p1:FrustumCullingEnabled>
+        <d3p1:IsVisible>true</d3p1:IsVisible>
+      </d3p1:Component>
+      <d3p1:Component xmlns:d4p1="http://schemas.datacontract.org/2004/07/RLEnvs.D3.Particles" i:type="d4p1:CurveApplierComponent">
+        <d4p1:Curve xmlns:d5p1="http://schemas.datacontract.org/2004/07/WaveEngine.Common.Curves">
+          <d5p1:cacheSize>256</d5p1:cacheSize>
+          <d5p1:isCached>true</d5p1:isCached>
+          <d5p1:keyframes>
+            <d5p1:ColorKeyframe>
+              <d5p1:Lerp>0</d5p1:Lerp>
+              <d5p1:Value xmlns:d8p1="WaveEngine.Common.Graphics">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>0</d8p1:B>
+                <d8p1:G>0</d8p1:G>
+                <d8p1:R>0</d8p1:R>
+              </d5p1:Value>
+            </d5p1:ColorKeyframe>
+            <d5p1:ColorKeyframe>
+              <d5p1:Lerp>0.603015065</d5p1:Lerp>
+              <d5p1:Value xmlns:d8p1="WaveEngine.Common.Graphics">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>230</d8p1:B>
+                <d8p1:G>230</d8p1:G>
+                <d8p1:R>230</d8p1:R>
+              </d5p1:Value>
+            </d5p1:ColorKeyframe>
+            <d5p1:ColorKeyframe>
+              <d5p1:Lerp>1</d5p1:Lerp>
+              <d5p1:Value xmlns:d8p1="WaveEngine.Common.Graphics">
+                <d8p1:A>255</d8p1:A>
+                <d8p1:B>255</d8p1:B>
+                <d8p1:G>255</d8p1:G>
+                <d8p1:R>255</d8p1:R>
+              </d5p1:Value>
+            </d5p1:ColorKeyframe>
+          </d5p1:keyframes>
+        </d4p1:Curve>
+        <d4p1:MaxValue>10</d4p1:MaxValue>
+        <d4p1:MinValue>1</d4p1:MinValue>
+        <d4p1:ParticlePropertyTarget>Size</d4p1:ParticlePropertyTarget>
+      </d3p1:Component>
+      <d3p1:Component xmlns:d4p1="http://schemas.datacontract.org/2004/07/RLEnvs.D3.Components" i:type="d4p1:ParticleImpulseActivator">
+        <d4p1:Action>YawPositive</d4p1:Action>
+      </d3p1:Component>
+    </d2p1:SerializeComponents>
+  </EntityModel>
+  <EntityPointers xmlns:d2p1="http://schemas.datacontract.org/2004/07/WaveEngine.Framework.Models.Entities" />
+</Prefab>

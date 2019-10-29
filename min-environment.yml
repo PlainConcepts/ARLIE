@@ -1,0 +1,16 @@
+name: arlie
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pip
+  - grpcio
+  - grpcio-tools
+  - googleapis-common-protos
+  - scipy
+  - numpy
+  - wrapt
+  - pip:
+      - gym
+      - keyboard
+      - arlie=1.0.0
