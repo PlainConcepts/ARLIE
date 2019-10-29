@@ -40,6 +40,9 @@ def check_envs():
         _download_extract_zip(url, base_dir)
         print("..install complete.")
 
+                if platform.system() == "Linux":
+            import stat
 
-if __name__ == "__main__":
-    check_envs()
+            for name in base_dir.rglob("*.exe"):
+                st = os.stat(name)
+                os.chmod(name, st.st_mode | stat.S_IEXEC)

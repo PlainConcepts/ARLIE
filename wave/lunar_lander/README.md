@@ -24,14 +24,15 @@ At least in ArchLinux is necessary to fix Roselyn path:
 Use msbuild to build the solution in release:
 
 ```bash
+nuget restore RLEnvs_Linux.sln
 msbuild RLEnvs_Linux.sln /t:Build /p:Configuration=Release
-chmod +x Launchers/Linux/bin/x86/Release/*.exe
 ```
 
 Then copy the contents of `[REPO]/wave/lunar_lander/Launchers/Linux/bin/x86/Release` to `[REPO]/arlie/arlie/envs/lunar_lander/LunarLander`
 
 ```bash
 cd ../..
+mkdir -p ./arlie/arlie/envs/lunar_lander/LunarLander
 rm -r ./arlie/arlie/envs/lunar_lander/LunarLander/*
 cp -r ./wave/lunar_lander/Launchers/Linux/bin/x86/Release/* ./arlie/arlie/envs/lunar_lander/LunarLander
 ```
