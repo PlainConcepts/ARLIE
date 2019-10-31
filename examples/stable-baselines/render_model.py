@@ -9,9 +9,8 @@ from common.utils import make_env  # noqa: E402
 from stable_baselines import A2C  # noqa: E402
 
 
-render_episodes = 20
 wave = True
-multi = True
+render_episodes = 20
 
 if len(sys.argv) < 2:
     print("USAGE: {} PATH-TO-MODEL-FILE".format(sys.argv[0]))
@@ -23,7 +22,7 @@ if not os.path.isfile(model_path):
     exit(-1)
 
 id = "LunarLander" if wave else "LunarLander-v2"
-env = make_env(id, wave, port=4000)
+env = make_env(id, wave, port=4000, reset_mode="random")
 
 model = A2C.load(model_path)
 

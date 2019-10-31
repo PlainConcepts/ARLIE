@@ -1,6 +1,6 @@
 import time
 from model import DQN
-from reward import CustomReward
+from rewards import CustomReward
 
 # CONFIG
 wave = True
@@ -24,6 +24,6 @@ t = time.time() - _t
 str_t = time.strftime("%H h, %M m, %S s", time.gmtime(t))
 print("Trained in {} during {} timesteps".format(str_t, learn_timesteps))
 
-model.save("trained-model")
+model.save("{}-trained-model".format("wave" if wave else "gym"))
 
 env.close()

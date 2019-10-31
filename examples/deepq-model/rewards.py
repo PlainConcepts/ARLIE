@@ -52,7 +52,7 @@ class CustomReward(BaseReward):
 
 
 class LunarCustomReward(LunarLanderReward):
-    """ Custom reward that applies no penalty for engine usage (infinite fuel)
+    """ Custom reward that applies penalty for engine usage (infinite fuel)
     and allows more velocity for touching ground without crashing
     (the lander is more resistant to hits) """
 

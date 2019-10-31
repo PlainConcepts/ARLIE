@@ -1,6 +1,6 @@
 import numpy as np
 from model import DQN
-from reward import CustomReward
+from rewards import CustomReward
 
 wave = True
 render_episodes = 7
@@ -14,7 +14,7 @@ else:
 
     env = gym.make("LunarLander-v2")
 
-model = DQN.load("trained-model")
+model = DQN.load("{}-trained-model".format("wave" if wave else "gym"))
 
 episode = render_episodes
 reward_sum = 0

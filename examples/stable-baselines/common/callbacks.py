@@ -31,12 +31,16 @@ def save_callback(
         steps = n_calls * C
         if steps // N >= next_index:
             print(
-                "Saving model {}{} at step {} ...".format(
+                "Saving snapshot {}{} at step {} ...".format(
                     int(steps / order), order_str, steps
                 )
             )
             locals_["self"].save(
-                "{}{}{}{}".format(file_path, file_prefix, int(steps / order), order_str)
+                str(
+                    file_path.joinpath(
+                        "{}{}{}".format(file_prefix, int(steps / order), order_str)
+                    )
+                )
             )
             next_index = steps // N + 1
         return True

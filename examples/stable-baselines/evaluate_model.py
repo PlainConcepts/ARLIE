@@ -1,3 +1,5 @@
+""" Evaluates Wave Lunar Lander model """
+
 import common.shutup as shutup
 
 shutup.future_warnings()
@@ -11,8 +13,8 @@ from common.utils import make_env, make_multi_env  # noqa: E402
 from stable_baselines import A2C  # noqa: E402
 from arlie.envs.lunar_lander.score import LunarLanderScore  # noqa: E402
 
+wave = True
 eval_timesteps = 1e5
-multi = True
 num_cpu = 12
 
 
@@ -23,9 +25,11 @@ def evaluate(env, model, num_steps=1000):
     :param num_steps: (int) number of timesteps to evaluate it
     :return: (float) Mean reward, (int) Number of episodes performed
     """
-    scores = [LunarLanderScore() for _ in range(env.num_envs)]
-    episode_scores = [[0.0] for _ in range(env.num_envs)]
     episode_rewards = [[0.0] for _ in range(env.num_envs)]
+    if wave:
+        scores = [LunarLanderScore() for _ in range(env.num_envs)]
+        episode_scores = [[0.0] for _ in range(env.num_envs)]
+
     obs = env.reset()
     steps = (int)(num_steps // env.num_envs)
     for i in range(steps):
@@ -37,24 +41,30 @@ def evaluate(env, model, num_steps=1000):
 
         # Stats
         for i in range(env.num_envs):
-            scores[i].store_step(obs[i], actions[i], info[i])
-            episode_scores[i][-1] = scores[i].get()
             episode_rewards[i][-1] += rewards[i]
+            if wave:
+                scores[i].store_step(obs[i], actions[i], info[i])
+                episode_scores[i][-1] = scores[i].get()
             if dones[i]:
-                episode_scores[i].append(0.0)
                 episode_rewards[i].append(0.0)
-                scores[i].reset()
+                if wave:
+                    episode_scores[i].append(0.0)
+                    scores[i].reset()
 
-    mean_scores = [0.0 for _ in range(env.num_envs)]
     mean_rewards = [0.0 for _ in range(env.num_envs)]
+    if wave:
+        mean_scores = [0.0 for _ in range(env.num_envs)]
     n_episodes = 0
     for i in range(env.num_envs):
-        mean_scores[i] = np.mean(episode_scores[i][:-1])
         mean_rewards[i] = np.mean(episode_rewards[i][:-1])
+        if wave:
+            mean_scores[i] = np.mean(episode_scores[i][:-1])
         n_episodes += len(episode_rewards[i]) - 1
 
     # Compute mean reward
-    mean_score = round(np.mean(mean_scores), 1)
+    mean_score = "NaN"
+    if wave:
+        mean_score = round(np.mean(mean_scores), 1)
     mean_reward = round(np.mean(mean_rewards), 1)
 
     return mean_score, mean_reward, n_episodes
@@ -70,10 +80,11 @@ if __name__ == "__main__":
         print("Path '{}' does not exist.".format(model_path))
         exit(-1)
 
+    id = "LunarLander" if wave else "LunarLander-v2"
     if num_cpu > 1:
-        env = make_multi_env(num_cpu, "LunarLander", True, render_mode=False)
+        env = make_multi_env(num_cpu, id, wave, render_mode=False, reset_mode="random")
     else:
-        env = make_env("LunarLander", True, render_mode=False, reset_mode="random")
+        env = make_env(id, wave, render_mode=False, reset_mode="random")
 
     if len(sys.argv) == 1:
         print("No model provided")
