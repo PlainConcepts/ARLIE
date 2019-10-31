@@ -1,10 +1,18 @@
-import arlie
 from arlie.models.random import RAND
 from arlie.envs.lunar_lander.score import LunarLanderScore
 
+wave = True
 render_episodes = 7
 
-env = arlie.make("LunarLander", port=5000, reset_mode="random")
+if wave:
+    import arlie
+
+    env = arlie.make("LunarLander")
+else:
+    import gym
+
+    env = gym.make("LunarLander-v2")
+
 model = RAND(env)
 score = LunarLanderScore()
 
