@@ -13,4 +13,4 @@ dependencies:
   - pip:
       - gym
       - keyboard
-      - arlie==1.0.0
+      - arlie==1.0.1
