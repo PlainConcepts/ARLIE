@@ -48,7 +48,7 @@ def evaluate(env, model, score, num_episodes=10):
 score = LunarLanderScore()
 reward = CustomReward() if use_custom_reward else None
 env = arlie.make("LunarLander", port=4000, seed=seed, render_mode=False, reward=reward)
-model = DQN.load("trained-model")
+model = DQN.load("wave-trained-model")
 
 print("Evaluating...")
 mean_score, mean_reward, n_episodes = evaluate(
