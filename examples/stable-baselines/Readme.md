@@ -1,5 +1,7 @@
 # Integration with stable-baselines algorithms example
 
+This example shows how to use stable-baselines, a compilation of state of the art RL algorithms made for OpenAI Gym, in ARLIE.
+
 ## Additional requirements
 
 See detailed information on installing stable-baselines [here](https://github.com/hill-a/stable-baselines#installation).

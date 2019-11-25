@@ -1,38 +1,11 @@
-# Wave environments compilation
+# Lunar Lander Environment
 
-## Windows
+The goal in this environment is to land a spacecraft in the moon in an specific location (the landing zone), without crashing.
 
-### Windows Prerequisites
+The actions that can be taken on the spacecraft are the activation of the Yaw & Roll left/right, Pitch up/down, and the main engine boost. Of course no action can be taken as well.
 
-[Microsoft Visual C++ 2010 Redistributable Package x86](https://www.microsoft.com/en-US/download/details.aspx?id=5555)
+The observation space is composed by the spacecraft position, rotation angle, speed, angular velocity (3D vectors), and the contact of each leg with the ground.
 
-### Windows Wave package
+The default reward sums points inversely proportional to the distance to the landing zone and the velocity of the spacecraft.
 
-From visual studio, build in release, copy the contents of `[REPO]\wave\lunar_lander\Launchers\Windows\bin\AnyCPU\Release` to `[REPO]\arlie\arlie\envs\lunar_lander\LunarLander`
-
-## Linux
-
-### Linux Prerequisites
-
-Install monodevelop SDL2 and SDL2_mixer
-
-At least in ArchLinux is necessary to fix Roselyn path:
-`sudo ln -s /usr/lib/mono/msbuild/Current/bin/Roslyn /usr/lib/mono/msbuild/15.0/bin/Roslyn`
-
-### Linux Wave package
-
-Use msbuild to build the solution in release:
-
-```bash
-nuget restore RLEnvs_Linux.sln
-msbuild RLEnvs_Linux.sln /t:Build /p:Configuration=Release
-```
-
-Then copy the contents of `[REPO]/wave/lunar_lander/Launchers/Linux/bin/x86/Release` to `[REPO]/arlie/arlie/envs/lunar_lander/LunarLander`
-
-```bash
-cd ../..
-mkdir -p ./arlie/arlie/envs/lunar_lander/LunarLander
-rm -r ./arlie/arlie/envs/lunar_lander/LunarLander/*
-cp -r ./wave/lunar_lander/Launchers/Linux/bin/x86/Release/* ./arlie/arlie/envs/lunar_lander/LunarLander
-```
+Its score function penalize the usage of the engines (0.15 for the main one, 0.015 for the sides), and considers landing rough as a crash. The maximum points for landing (without taking into account previous steps) are 100, while the minimum for crashing far is -100.

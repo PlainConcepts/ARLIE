@@ -1,5 +1,7 @@
 # DQN model with Keras example
 
+This example shows how to implement a new model (in this case using DeepQ algorithm), and a couple of rewards for the LunarLander environment. It also shows how a model built in ARLIE is also compatible with OpenAI Gym (and viceversa).
+
 ## Additional requirements
 
 This model uses tensorflow:
