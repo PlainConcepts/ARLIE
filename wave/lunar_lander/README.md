@@ -1,6 +1,13 @@
 # Lunar Lander Environment
 
-The goal in this environment is to land a spacecraft in the moon in an specific location (the landing zone), without crashing.
+The goal is is to land a spacecraft in the moon in an specific location (the landing zone), without crashing.
+
+---
+Check [ARLIE documentation](https://github.com/PlainConcepts/ARLIE#playing-with-arlie) and [examples](https://github.com/PlainConcepts/ARLIE#examples) for detailed information on how to train policies in an environment in ARLIE.
+
+---
+
+![Lunar Lander landing](https://raw.githubusercontent.com/PlainConcepts/ARLIE/master/wave/lunar_lander/lunarlander.gif)
 
 The actions that can be taken on the spacecraft are the activation of the Yaw & Roll left/right, Pitch up/down, and the main engine boost. Of course no action can be taken as well.
 
