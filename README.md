@@ -6,6 +6,12 @@ ARLIE makes easier to work on complex reinforcement learning problems by providi
 
 For each environment, users can develop and/or test multiple training algorithms, policies, or rewards to get to an optimal solution in as less training steps as possible. To measure the optimality of a solution, each environment provides a _score_ function.
 
+## [CHARLIE](http://charlie.plainconcepts.com/)
+
+[CHallenging with ARLIE](http://charlie.plainconcepts.com/) is a platform to encourage developers to come up with novel RL techniques and solve the different ARLIE environments.
+
+Best scores are published in the [Learderboard](http://charlie.plainconcepts.com/leaderboard). Do you have what it takes to beat the leader? Submit your solution and compete with the others for the first place!
+
 ## Playing with ARLIE
 
 ### Installation
