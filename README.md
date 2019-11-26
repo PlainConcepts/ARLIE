@@ -20,6 +20,10 @@ There is also a conda file `min-environment.yml` that creates a conda environmen
 
 As the 3D environments can be much heavy than regular python packages, they are downloaded separately the first time the package is executed.
 
+Check this PlainTV on how to start with ARLIE (Spanish):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EH1dywTdybQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Environments
 
 Environments simulate 3D scenarios using [Wave Engine](https://waveengine.net/), in which a certain goal must be achieve. That goal is modeled by a _score_ function which evaluate according to how good the goal was achieved.
@@ -47,3 +51,11 @@ Four examples illustrates how to work with ARLIE.
 * [Human Model](https://github.com/PlainConcepts/ARLIE/tree/master/examples/human-model/Readme.md)
 * [DeepQ Model](https://github.com/PlainConcepts/ARLIE/tree/master/examples/deepq-model/Readme.md)
 * [Stable Baselines](https://github.com/PlainConcepts/ARLIE/blob/master/examples/stable-baselines/Readme.md)
+
+In this PlainTV we present the Random, Human and DeepQ examples (Spanish):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w4h0nTHOyMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In this PlainTV we present how ARLIE can be integrated with Stable Baselines (Spanish):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y-wJFa_3WME" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
