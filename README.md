@@ -22,7 +22,7 @@ As the 3D environments can be much heavy than regular python packages, they are 
 
 Check this PlainTV on how to start with ARLIE (Spanish):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EH1dywTdybQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Introduction to ARLIE](https://img.youtube.com/vi/EH1dywTdybQ/0.jpg)](https://www.youtube.com/watch?v=EH1dywTdybQ)
 
 ### Environments
 
@@ -54,8 +54,8 @@ Four examples illustrates how to work with ARLIE.
 
 In this PlainTV we present the Random, Human and DeepQ examples (Spanish):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w4h0nTHOyMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Exploring ARLIE](https://img.youtube.com/vi/w4h0nTHOyMg/0.jpg)](https://www.youtube.com/watch?v=w4h0nTHOyMg)
 
 In this PlainTV we present how ARLIE can be integrated with Stable Baselines (Spanish):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y-wJFa_3WME" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![ARLIE and its friends](https://img.youtube.com/vi/y-wJFa_3WME/0.jpg)](https://www.youtube.com/watch?v=y-wJFa_3WME)
