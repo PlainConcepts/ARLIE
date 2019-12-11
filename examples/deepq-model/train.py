@@ -1,6 +1,6 @@
-import time
 from model import DQN
 from rewards import CustomReward
+from arlie.challenge import train
 
 # CONFIG
 wave = True
@@ -17,13 +17,8 @@ else:
 
 model = DQN(env)
 
-print("Training...")
-_t = time.time()
-model.learn(total_timesteps=learn_timesteps)
-t = time.time() - _t
-str_t = time.strftime("%H h, %M m, %S s", time.gmtime(t))
-print("Trained in {} during {} timesteps".format(str_t, learn_timesteps))
+name = "{}-dqnmodel".format("wave" if wave else "gym")
 
-model.save("{}-trained-model".format("wave" if wave else "gym"))
-
+path = train(model, name, learn_timesteps)
+print("Trained model at {}".format(path))
 env.close()

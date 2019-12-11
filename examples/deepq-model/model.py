@@ -66,7 +66,8 @@ class DQN:
         if self.env is not None and np.random.rand() <= self.epsilon:
             action = random.randrange(self.action_size)
         else:
-            act_values = self.policy.predict(observation)
+            obs = np.reshape(observation, (1, self.obs_size))
+            act_values = self.policy.predict(obs)
             action = np.argmax(act_values[0])
         return action, None
 
@@ -80,12 +81,11 @@ class DQN:
         reset_num_timesteps=True,
     ):
 
-        obs = np.reshape(self.env.reset(), (1, self.obs_size))
+        obs = self.env.reset()
         episode_rewards = [0.0]
         for step in range(total_timesteps):
             action, _ = self.predict(obs)
             obs_, reward, done, _ = self.env.step(action)
-            obs_ = np.reshape(obs_, (1, self.obs_size))
 
             self._store_transition(obs, action, reward, obs_, done)
             self._replay()
@@ -95,7 +95,7 @@ class DQN:
 
             if done:
                 episode_rewards.append(0.0)
-                obs = np.reshape(self.env.reset(), (1, self.obs_size))
+                obs = self.env.reset()
 
     def save(self, save_path):
         """
@@ -201,7 +201,9 @@ class DQN:
         return None
 
     def _store_transition(self, observation, action, reward, next_observation, done):
-        self.memory.append((observation, action, reward, next_observation, done))
+        obs = np.reshape(observation, (1, self.obs_size))
+        obs_ = np.reshape(next_observation, (1, self.obs_size))
+        self.memory.append((obs, action, reward, obs_, done))
 
     def _replay(self):
 
