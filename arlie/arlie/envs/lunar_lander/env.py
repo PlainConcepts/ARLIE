@@ -136,3 +136,14 @@ class LunarLander(gym.Env):
             "angular_velocity": observation[9:12],  # [X, Y, Z]
             "leg_contact": observation[12:16],  # [Front, Back, Left, Right]
         }
+
+    def get_min_evaluation_steps():
+        return 1e4
+
+    def get_min_evaluation_steps_per_env():
+        return 8000
+
+    def get_score_function():
+        from arlie.envs.lunar_lander.score import LunarLanderScore
+
+        return LunarLanderScore

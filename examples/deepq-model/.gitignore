@@ -1,6 +1,7 @@
 # Custom
 *.h5
 *.zip
+training/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
