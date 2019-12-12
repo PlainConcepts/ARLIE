@@ -7,6 +7,7 @@ import sys  # noqa: E402
 import os.path  # noqa: E402
 from common.utils import make_env  # noqa: E402
 from stable_baselines import A2C  # noqa: E402
+from arlie.challenge import render  # noqa: E402
 
 
 wave = True
@@ -26,17 +27,6 @@ env = make_env(id, wave, port=4000, reset_mode="random")
 
 model = A2C.load(model_path)
 
-episode = render_episodes
-reward_sum = 0
-obs = env.reset()
-while episode > 0:
-    action, _states = model.predict(obs)
-    obs, reward, done, _ = env.step(action)
-    reward_sum += reward
-    env.render()
-    if done:
-        print("Points: {}".format(reward_sum))
-        episode -= 1
-        reward_sum = 0
+render(env, model, render_episodes)
 
 env.close()

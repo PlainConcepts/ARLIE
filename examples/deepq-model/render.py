@@ -1,9 +1,11 @@
-import numpy as np
 from model import DQN
 from rewards import CustomReward
+from pathlib import Path
+from arlie.challenge import render
 
 wave = True
-render_episodes = 7
+render_episodes = 5
+path = Path("./training/20191211_174703")
 
 if wave:
     import arlie
@@ -14,21 +16,10 @@ else:
 
     env = gym.make("LunarLander-v2")
 
-model = DQN.load("{}-trained-model".format("wave" if wave else "gym"))
+name = "{}-dqnmodel".format("wave" if wave else "gym")
 
-episode = render_episodes
-reward_sum = 0
-obs = np.reshape(env.reset(), (1, model.obs_size))
-while episode > 0:
-    action, _states = model.predict(obs)
-    obs, reward, done, _ = env.step(action)
-    obs = np.reshape(obs, (1, model.obs_size))
-    reward_sum += reward
-    env.render()
-    if done:
-        print("Points: {}".format(reward_sum))
-        episode -= 1
-        reward_sum = 0
-        obs = np.reshape(env.reset(), (1, model.obs_size))
+model = DQN.load(str(path.joinpath(name)))
+
+render(env, model, render_episodes)
 
 env.close()

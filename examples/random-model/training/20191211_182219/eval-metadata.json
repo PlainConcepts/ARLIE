@@ -1,0 +1,1 @@
+{"steps": 10000.0, "episodes": 42, "mean_steps": 238.0952380952381, "mean_score": -56.89, "best_score": -9.69894471049311, "worst_score": -127.65891368865967, "mean_reward": -5.06, "best_reward": 192.08822681515562, "worst_reward": -186.0122462170057, "time": "01 d, 00 h, 05 m, 02 s"}
