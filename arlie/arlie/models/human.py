@@ -1,8 +1,8 @@
 import keyboard
-import numpy as np
+from arlie.models.base_model import BaseModel
 
 
-class HUMAN:
+class HUMAN(BaseModel):
     def __init__(self, env, quit_key="q", *args, **kwars):
         self.env = env
         self._quit_key = quit_key
@@ -29,15 +29,6 @@ class HUMAN:
                     break
         return action, None
 
-    def setup_model(self):
-        pass
-
-    def get_parameter_list(self):
-        return []
-
-    def _get_pretrain_placeholders(self):
-        return None
-
     def learn(
         self,
         total_timesteps,
@@ -48,11 +39,6 @@ class HUMAN:
         reset_num_timesteps=True,
     ):
         return self
-
-    def action_probability(
-        self, observation, state=None, mask=None, actions=None, logp=False
-    ):
-        return None
 
     def save(self, save_path, cloudpickle=False):
         pass

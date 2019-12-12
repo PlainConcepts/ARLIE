@@ -11,10 +11,11 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.optimizers import Adam
 from tensorflow.python.framework.ops import disable_eager_execution
 
+from arlie.models.base_model import BaseModel
 from common.save_util import data_to_json, json_to_data
 
 
-class DQN:
+class DQN(BaseModel):
     """Agent using deep q learn algorithm"""
 
     def __init__(
@@ -190,15 +191,6 @@ class DQN:
     def seed(self, seed=None):
         self._seed = seed
         np.random.seed(seed)
-
-    def setup_model(self):
-        pass
-
-    def get_parameter_list(self):
-        return []
-
-    def _get_pretrain_placeholders(self):
-        return None
 
     def _store_transition(self, observation, action, reward, next_observation, done):
         self.memory.append((observation, action, reward, next_observation, done))

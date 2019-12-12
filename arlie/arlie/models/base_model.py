@@ -1,21 +1,17 @@
-import random
-from arlie.models.base_model import BaseModel
+from abc import ABC, abstractmethod
 
 
-class RAND(BaseModel):
-    def __init__(self, env, *args, **kwars):
-        self.env = env
-        self.observation_space = env.observation_space
-        self.action_space = env.action_space
-
+class BaseModel(ABC):
+    @abstractmethod
     def predict(self, *args, **kwargs):
         """
         Get the model's action randomly
         :return: (int, np.ndarray) the model's action and the next state
         (used in recurrent policies)
         """
-        return random.randint(0, self.action_space.n - 1), None
+        pass
 
+    @abstractmethod
     def learn(
         self,
         total_timesteps,
@@ -25,10 +21,12 @@ class RAND(BaseModel):
         tb_log_name="run",
         reset_num_timesteps=True,
     ):
-        return self
+        pass
 
+    @abstractmethod
     def save(self, save_path, cloudpickle=False):
         pass
 
+    @abstractmethod
     def load(cls, load_path, env=None, custom_objects=None, **kwargs):
         pass
